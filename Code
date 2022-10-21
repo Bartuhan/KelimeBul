@@ -1,0 +1,204 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Ders23_09_2022
+{
+    public partial class Form2 : Form
+    {
+        
+        public Form2()
+        {
+            InitializeComponent();
+        }
+        string yaz = "";
+        string kytKelime = "";
+        string[] Kelime = { "kalem", "silgi","yalan", "dolan", "kısım", "köpek","asdas" };
+        Random rnd = new Random();
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            yaz = KelimeUret();
+
+        }
+        int no;
+        int sayac = 1;
+        string KelimeUret ()
+        {
+
+            no= rnd.Next(0, Kelime.Length);
+            kytKelime = Kelime[no];
+            
+
+            return kytKelime;
+        }
+
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            char[] charAray = Kelime[no].ToCharArray();
+
+            string harf1 = textBox1.Text;
+            string harf2 = textBox2.Text;
+            string harf3 = textBox3.Text;
+            string harf4 = textBox4.Text;
+            string harf5 = textBox5.Text;
+
+            switch (sayac)
+            {
+                case 1:
+                    if (charAray[0].ToString() == harf1)
+                    {
+                        label1.Text = harf1;
+                    }else label1.Text = " X ";
+                    
+                    if (charAray[1].ToString() == harf2)
+                    {
+                        label2.Text = harf2;
+                    }else label2.Text = " X ";
+                    
+                    if (charAray[2].ToString() == harf3)
+                    {
+                        label3.Text = harf3;
+                    }else label3.Text = " X ";
+                    
+                    if (charAray[3].ToString() == harf4)
+                    {
+                        label4.Text = harf4;
+                    }else label4.Text = " X ";
+                    
+                    if (charAray[4].ToString() == harf5)
+                    {
+                        label5.Text = harf5;
+                    }else label5.Text = " X ";
+                    break;
+                case 2:
+                    if (charAray[0].ToString() == harf1)
+                    {
+                        label6.Text = harf1;
+                    }
+                    else label6.Text = " X ";
+                    if (charAray[1].ToString() == harf2)
+                    {
+                        label7.Text = harf2;
+                    }
+                    else label7.Text = " X ";
+                    if (charAray[2].ToString() == harf3)
+                    {
+                        label8.Text = harf3;
+                    }
+                    else label8.Text = " X ";
+                    if (charAray[3].ToString() == harf4)
+                    {
+                        label9.Text = harf4;
+                    }
+                    else label9.Text = " X ";
+                    if (charAray[4].ToString() == harf5)
+                    {
+                        label10.Text = harf5;
+                    }
+                    else label10.Text = " X ";
+                    break;
+                case 3:
+                    if (charAray[0].ToString() == harf1)
+                    {
+                        label11.Text = harf1;
+                    }
+                    else label11.Text = " X ";
+                    if (charAray[1].ToString() == harf2)
+                    {
+                        label12.Text = harf2;
+                    }
+                    else label12.Text = " X ";
+                    if (charAray[2].ToString() == harf3)
+                    {
+                        label13.Text = harf3;
+                    }
+                    else label13.Text = " X ";
+                    if (charAray[3].ToString() == harf4)
+                    {
+                        label14.Text = harf4;
+                    }
+                    else label14.Text = " X ";
+                    if (charAray[4].ToString() == harf5)
+                    {
+                        label15.Text = harf5;
+                    }
+                    else label15.Text = " X ";
+                    break;
+                case 4:
+                    if (charAray[0].ToString() == harf1)
+                    {
+                        label16.Text = harf1;
+                    }
+                    else label16.Text = " X ";
+                    if (charAray[1].ToString() == harf2)
+                    {
+                        label17.Text = harf2;
+                    }
+                    else label17.Text = " X ";
+                    if (charAray[2].ToString() == harf3)
+                    {
+                        label18.Text = harf3;
+                    }
+                    else label18.Text = " X ";
+                    if (charAray[3].ToString() == harf4)
+                    {
+                        label19.Text = harf4;
+                    }
+                    else label19.Text = " X ";
+                    if (charAray[4].ToString() == harf5)
+                    {
+                        label20.Text = harf5;
+                    }
+                    else label20.Text = " X ";
+                    break;
+                case 5:
+                    if (charAray[0].ToString() == harf1)
+                    {
+                        label21.Text = harf1;
+                    }
+                    else label21.Text = " X ";
+                    if (charAray[1].ToString() == harf2)
+                    {
+                        label22.Text = harf2;
+                    }
+                    else label22.Text = " X ";
+                    if (charAray[2].ToString() == harf3)
+                    {
+                        label23.Text = harf3;
+                    }
+                    else label23.Text = " X ";
+                    if (charAray[3].ToString() == harf4)
+                    {
+                        label24.Text = harf4;
+                    }
+                    else label24.Text = " X ";
+                    if (charAray[4].ToString() == harf5)
+                    {
+                        label25.Text = harf5;
+                    }
+                    else label25.Text = " X ";
+                    break;
+            }
+            if (sayac==6)
+            {
+                MessageBox.Show("Kaybettiniz ! ! !");
+                Environment.Exit(0);
+            }
+            if (harf1==charAray[0].ToString() && harf2 == charAray[1].ToString() && harf3 == charAray[2].ToString() && harf4 == charAray[3].ToString() && harf5 == charAray[4].ToString())
+            {
+                MessageBox.Show("Tebrikler Kazandınız ! ! !");
+                Environment.Exit(0);
+            }
+            sayac++;
+            
+        }
+    }
+}
